@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FC Barcelona</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="site/style.css" type="text/css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="players" class="col-md-4 sections">
+        <h2>Players</h2>
+        <div class="text-center">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul id="playerListMenu" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="results" class="col-md-4 sections">
+        <h2>Results</h2>
+    </div>
+
+    <div id="fixtures" class="col-md-4 sections">
+        <h2>Fixtures</h2>
+    </div>
+
+
+</div>
+
+
+
+<script type="text/template" id="playerTemplate">
+    <h4>Name: <%= name %></h4>
+    <h4>Position: <%= position %></h4>
+    <h4>JerseyNumber: <%= jerseyNumber %></h4>
+    <h4>DOB: <%= dateOfBirth %></h4>
+    <h4>Nationality: <%= nationality %></h4>
+    <h4>Contract Until: <%= contractUntil %></h4>
+    <h4>Price: <%= marketValue %></h4>
+</script>
+
+<script type="text/template" id="listTemplate">
+    <li><a href="#" class="dropdownPlayer"><%= name %></a></li>
+</script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
