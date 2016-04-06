@@ -3,8 +3,7 @@
  */
 
 var PlayerView = Backbone.View.extend({
-    tagName: "div",
-    className: "player",
+    el: "div.player",
     template: _.template($("#playerTemplate").html()),
 
     render: function() {
@@ -26,7 +25,6 @@ var PlayersView = Backbone.View.extend({
         this.collection.fetch({ success: this.render });
     },
     render: function() {
-
         this.$el.append(new PlayerView({model: this.collection.at(6)}).render().$el);
     },
     displayDropdown: function() {
