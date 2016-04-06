@@ -16,7 +16,6 @@ var PlayerView = Backbone.View.extend({
 var PlayersView = Backbone.View.extend({
     el: "#players",
     listTemplate: _.template($("#listTemplate").html()),
-    list: [1,2,3,4,5],
     events: {
         "click #dropdownMenu1": "displayDropdown",
         "click .dropdownPlayer": "displayPlayer"
@@ -27,6 +26,7 @@ var PlayersView = Backbone.View.extend({
         this.collection.fetch({ success: this.render });
     },
     render: function() {
+
         this.$el.append(new PlayerView({model: this.collection.at(6)}).render().$el);
     },
     displayDropdown: function() {
@@ -36,11 +36,16 @@ var PlayersView = Backbone.View.extend({
         }, this);
     },
     displayPlayer: function(e) {
+
+        // Get the clicked player model
         var clickedPlayerModel = this.collection.where({
             name: $(e.target).text()
         })[0];
-        
-        console.log(clickedPlayerModel.toJSON());
+
+        // empty the previously loaded player
+        this.$(".player").empty();
+        this.$el.append(new PlayerView({model: clickedPlayerModel}).render().$el);
     }
 });
+
 
