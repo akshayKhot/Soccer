@@ -20,7 +20,7 @@
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="true">
-                    Dropdown
+                    Select Player
                     <span class="caret"></span>
                 </button>
                 <ul id="playerListMenu" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenu1">
@@ -36,10 +36,16 @@
 
     <div id="results" class="col-md-4 sections">
         <h2>Results</h2>
+        <div id="scores" class="pre-scrollable">
+
+        </div>
     </div>
 
     <div id="fixtures" class="col-md-4 sections">
         <h2>Fixtures</h2>
+        <div id="games">
+
+        </div>
     </div>
 
 </div>
@@ -60,6 +66,9 @@
 <script type="text/template" id="listTemplate">
     <li><a href="#" class="dropdownPlayer"><%= name %></a></li>
 </script>
+<script type="text/template" id="scoreTemplate">
+<h4><%= homeTeam %>  <%= homeTeamGoals %>:<%= awayTeamGoals %>  <%= awayTeam %></h4>
+</script>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
@@ -68,6 +77,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="js/model.js"></script>
 <script src="js/view.js"></script>
+<script src="js/plays.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

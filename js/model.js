@@ -6,6 +6,8 @@ $.ajaxSetup({
     headers: { 'X-Auth-Token': '2b0fd684e54f44e2832cb0b6df30ee98' }
 });
 
+var BASE_URL = "http://api.football-data.org";
+
 var PlayerModel = Backbone.Model.extend({
     defaults: {
         "name": "Marc-André ter Stegen",
@@ -19,7 +21,7 @@ var PlayerModel = Backbone.Model.extend({
 });
 
 var PlayersCollection = Backbone.Collection.extend({
-    url: "http://api.football-data.org/v1/teams/81/players",
+    url: BASE_URL + "/v1/teams/81/players",
     model: PlayerModel,
 
     parse: function(response) {

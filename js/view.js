@@ -47,3 +47,35 @@ var PlayersView = Backbone.View.extend({
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,12 @@
+body {
+    background: url("http://www.ambwallpapers.com/wp-content/uploads/2015/03/goodwp.com_29570.jpg");
+}
 .container {
     border: 1px solid gray;
     height: 700px;
     border-radius: 10px;
     margin-top: 20px;
+    background-color: ghostwhite;
 }
 
 .sections {
@@ -37,4 +41,9 @@
 .img-thumbnail {
     width: 200px;
     height: 200px;
+}
+
+#scores {
+    text-align: center;
+    max-height: 400px;
 }
