@@ -13,14 +13,3 @@ var FixtureView = Backbone.View.extend({
     }
 });
 
-var FixturesView = Backbone.View.extend({
-    el: "#fix",
-
-    initialize: function() {
-        _.bindAll(this, "render");
-        this.co
-    },
-    render: function() {
-
-    }
-});
