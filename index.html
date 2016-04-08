@@ -36,14 +36,14 @@
 
     <div id="results" class="col-md-4 sections">
         <h2>Results</h2>
-        <div id="scores" class="pre-scrollable">
+        <div id="scores" class="pre-scrollable resfix">
 
         </div>
     </div>
 
     <div id="fixtures" class="col-md-4 sections">
         <h2>Fixtures</h2>
-        <div id="games">
+        <div id="games" class="resfix">
 
         </div>
     </div>
@@ -54,13 +54,15 @@
     <div class="profile">
         <img src="site/images/profile/<%= jerseyNumber %>.jpg" class="img-thumbnail">
     </div>
-    <h4>Name: <%= name %></h4>
-    <h4>Position: <%= position %></h4>
-    <h4>JerseyNumber: <%= jerseyNumber %></h4>
-    <h4>DOB: <%= dateOfBirth %></h4>
-    <h4>Nationality: <%= nationality %></h4>
-    <h4>Contract Until: <%= contractUntil %></h4>
-    <h4>Price: <%= marketValue %></h4>
+    <div class="resfix">
+        <h4>Name: <%= name %></h4>
+        <h4>Position: <%= position %></h4>
+        <h4>JerseyNumber: <%= jerseyNumber %></h4>
+        <h4>DOB: <%= dateOfBirth %></h4>
+        <h4>Nationality: <%= nationality %></h4>
+        <h4>Contract Until: <%= contractUntil %></h4>
+        <h4>Price: <%= marketValue %></h4>
+    </div>
 </script>
 
 <script type="text/template" id="listTemplate">
@@ -76,7 +78,7 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="js/model.js"></script>
-<script src="js/view.js"></script>
+<script src="js/views/playersView.js"></script>
 <script src="js/plays.js"></script>
 <script src="js/app.js"></script>
 </body>

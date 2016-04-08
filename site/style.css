@@ -6,7 +6,7 @@ body {
     height: 700px;
     border-radius: 10px;
     margin-top: 20px;
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 .sections {
@@ -43,7 +43,11 @@ body {
     height: 200px;
 }
 
-#scores {
+.resfix {
     text-align: center;
     max-height: 400px;
+    background-color: lightskyblue;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
 }
