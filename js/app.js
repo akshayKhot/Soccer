@@ -6,4 +6,9 @@ var playersView = new PlayersView({
     collection: catalons
 });
 
+var resView = new ResultsView({
+    collection: games
+});
+
+
 

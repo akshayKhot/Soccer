@@ -36,16 +36,16 @@
 
     <div id="results" class="col-md-4 sections">
         <h2>Results</h2>
-        <div id="scores" class="pre-scrollable resfix">
+        <ul id="res" class="scrollable-list list-group">
 
-        </div>
+        </ul>
     </div>
 
     <div id="fixtures" class="col-md-4 sections">
         <h2>Fixtures</h2>
-        <div id="games" class="resfix">
+        <ul id="fix" class="scrollable-list list-group">
 
-        </div>
+        </ul>
     </div>
 
 </div>
@@ -64,22 +64,29 @@
         <h4>Price: <%= marketValue %></h4>
     </div>
 </script>
-
 <script type="text/template" id="listTemplate">
     <li><a href="#" class="dropdownPlayer"><%= name %></a></li>
 </script>
 <script type="text/template" id="scoreTemplate">
-<h4><%= homeTeam %>  <%= homeTeamGoals %>:<%= awayTeamGoals %>  <%= awayTeam %></h4>
+    <h5><%= homeTeamName %></h5> <h3><%= result.goalsHomeTeam %>:<%= result.goalsAwayTeam %></h3><h5>  <%= awayTeamName %></h5>
+</script>
+<script type="text/template" id="fixtureTemplate">
+    <h5><%= homeTeamName %> : <%= awayTeamName %></h5>
 </script>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/backbone/backbone.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="js/model.js"></script>
+
+<script src="js/models/playerModel.js"></script>
+<script src="js/models/gamesModel.js"></script>
 <script src="js/views/playersView.js"></script>
+<script src="js/views/resultsView.js"></script>
+
 <script src="js/plays.js"></script>
 <script src="js/app.js"></script>
+
+
 </body>
 </html>
